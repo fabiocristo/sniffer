@@ -2,9 +2,9 @@ from socket import *
 
 s = socket(AF_INET, SOCK_RAW, IPPROTO_TCP)
 
-n = 1
+number = 1
 while 1:
-    print("Number: ", n)
+    print("Number: ", number)
     data = s.recvfrom(65565)
     packet = data[0]
     address = data[1]
@@ -17,4 +17,4 @@ while 1:
         print("Protocol: ICMP") 
     print("Address: ", address)
     print("Data: ", data)
-    n = n + 1
+    number = number + 1
